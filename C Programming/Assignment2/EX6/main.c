@@ -17,15 +17,14 @@ int main(void)
     if (n <= 0)
     {
         printf("Please enter a positive integer.\n");
+        return 0;
     }
-    else
+
+    for (i = 1; i <= n; i++)
     {
-        for (i = 1; i <= n; i++)
-        {
-            sum = sum + i;
-        }
-        printf("Sum = %lld\n", sum);
+        sum = sum + i;
     }
+    printf("Sum = %lld\n", sum);
 
     return 0;
 }
