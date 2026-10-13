@@ -17,20 +17,21 @@ int main(void)
     if (number < 0)
     {
         printf("Error!!! Factorial of negative number doesn't exist.\n");
+        return 0;
     }
-    else if (number > 20)
+
+    if (number > 20)
     {
         /* Larger factorials do not fit in a 64-bit integer. */
         printf("Please enter a number from 0 to 20.\n");
+        return 0;
     }
-    else
+
+    for (i = 1; i <= number; i++)
     {
-        for (i = 1; i <= number; i++)
-        {
-            factorial = factorial * i;
-        }
-        printf("Factorial = %llu\n", factorial);
+        factorial = factorial * i;
     }
+    printf("Factorial = %llu\n", factorial);
 
     return 0;
 }
