@@ -13,20 +13,17 @@ int main(void)
         return 1;
     }
 
-    if ((letter >= 'a' && letter <= 'z') ||
-        (letter >= 'A' && letter <= 'Z'))
+    if (letter == 'a' || letter == 'e' || letter == 'i' ||
+        letter == 'o' || letter == 'u' || letter == 'A' ||
+        letter == 'E' || letter == 'I' || letter == 'O' ||
+        letter == 'U')
     {
-        if (letter == 'a' || letter == 'e' || letter == 'i' ||
-            letter == 'o' || letter == 'u' || letter == 'A' ||
-            letter == 'E' || letter == 'I' || letter == 'O' ||
-            letter == 'U')
-        {
-            printf("%c is a vowel.\n", letter);
-        }
-        else
-        {
-            printf("%c is a consonant.\n", letter);
-        }
+        printf("%c is a vowel.\n", letter);
+    }
+    else if ((letter >= 'a' && letter <= 'z') ||
+             (letter >= 'A' && letter <= 'Z'))
+    {
+        printf("%c is a consonant.\n", letter);
     }
     else
     {
